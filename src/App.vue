@@ -1,6 +1,8 @@
+// 单文件组件
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
+    <!-- 显示的是当前地址所对应的路由内容 -->
     <router-view/>
   </div>
 </template>
@@ -12,12 +14,12 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
 </style>
