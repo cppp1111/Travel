@@ -40,6 +40,7 @@ return {
     background-color: red !important
 
 .wrapper
+    text-align :center
     overflow :hidden
     width :100%
     height :0
