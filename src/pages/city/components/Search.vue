@@ -14,7 +14,7 @@ export default {
     height: .72rem
     padding: 0
     padding-left .1rem
-    padding-right .17rem
+    padding-right .1rem
     background: $bgColor
     .search-input
         box-sizing border-box
