@@ -18,7 +18,7 @@
                 </div>
             </div>
             <!-- 这里循环的是对象，对象里v-for后的第二个数的key -->
-            <div class="area" v-for="(item,key) of cities" :key="key">
+            <div :ref="key" class="area" v-for="(item,key) of cities" :key="key">
                 <div class="title border-topbottom">{{key}}</div>
                 <div class="item-list">
                     <div class="item border-bottom" v-for="innerItem of item">{{innerItem.name}}</div>
@@ -33,7 +33,22 @@ export default {
     name:'CityList',
     props:{
         cities :Object,
-        hot :Array
+        hot :Array,
+        letter:String
+    },
+    // 监听器      -----------https://blog.csdn.net/edc666/article/details/104670059/
+    watch:{
+        letter(){
+            // console.log(this.letter);
+            if(this.letter){
+                // 需要获取的dom应该是整个area，而不是愚蠢的去获取title
+                // 还有一点需要注意，如果是循环的，那么ref前面得加上冒号
+                // 即写成 :ref
+                const element = this.$refs[this.letter][0]
+                // console.log(element);
+                this.scroll.scrollToElement(element)
+            }
+        }
     },
     mounted(){
         this.scroll = new Bscroll(this.$refs.wrapper)
