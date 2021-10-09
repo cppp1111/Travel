@@ -1,9 +1,11 @@
 // 单文件组件
 <template>
   <div id="app">
+    <keep-alive>
     <!-- <img src="./assets/logo.png"> -->
     <!-- 显示的是当前地址所对应的路由内容 -->
-    <router-view/>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

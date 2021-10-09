@@ -9,7 +9,7 @@
         </div>
         <router-link to='/city'>
             <div class="header-right">
-                {{this.doubleCity}}
+                {{this.city}}
                 <span class="iconfont arrow-icon">&#xe62b;</span>
             </div>
         </router-link>
@@ -24,7 +24,7 @@ export default{
         // mapState的作用是指vuex里的数据映射到我这个组件的computed计算属性的组件里
         // 映射的是这个公有属性city映射到这个名字叫做city的计算属性之中
         ...mapState(['city']),
-        ...mapGetters(['doubleCity'])
+        // ...mapGetters(['doubleCity'])
     }
 }
 </script>
