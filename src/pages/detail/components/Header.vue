@@ -24,6 +24,7 @@ export default {
     },
     methods:{
         handleScroll(){
+            // console.log('scroll');
             const top = document.documentElement.scrollTop
             if (top > 50) {
                 let opacity = top/140
@@ -41,6 +42,10 @@ export default {
     // 监听
     activated(){
         window.addEventListener('scroll',this.handleScroll)
+    },
+    // 当页面被隐藏的时候，对这个全局的绑定进行解绑
+    deactivated(){
+        window.removeEventListener('scroll',this.handleScroll)
     }
 }
 </script>
