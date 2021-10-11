@@ -19,7 +19,8 @@ export default{
     data () {
     return {
         swiperOption: {
-            pagination: ".swiper-pagination",
+            pagination: '.swiper-pagination',
+            paginationType:'bullets',
             autoplay:true,
             loop: true,
             speed: 1000,
