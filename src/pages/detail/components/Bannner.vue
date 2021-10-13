@@ -1,27 +1,30 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="https://imgs.qunarzz.com/sight/p0/2110/f3/f37ce8102d8cf49ea3.img.jpg_710x360_05cbeb01.jpg" alt="">
+            <img class="banner-img" :src="bannerImg" alt="">
             <div class="banner-info">
-                <div class="banner-tittle">世界之窗5A景区</div>
+                <div class="banner-tittle">{{this.sightName}}</div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe6b2;</span>
-                    39
+                    {{this.bannerImgs.length}}
                 </div>
             </div>
         </div>
-        <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
     </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary'
 export default {
     name:'DetailBanner',
+    props:{
+        sightName:String,
+        bannerImg:String,
+        bannerImgs:Array
+    },
     data(){
         return{
             showGallary:false,
-            imgs:['https://imgs.qunarzz.com/sight/p0/2110/f3/f37ce8102d8cf49ea3.img.jpg_710x360_05cbeb01.jpg',
-                        'https://imgs.qunarzz.com/sight/p0/2110/d8/d8b559c0ba0e3ea5a3.img.jpg_1190x550_6f613100.jpg']
         }
     },
     methods:{
