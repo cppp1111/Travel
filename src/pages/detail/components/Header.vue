@@ -4,7 +4,7 @@
             <div class="iconfont header-abs-back">&#xe624;</div>
         </router-link>
         <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-            <router-link to="/">
+            <router-link tag="div" to="/">
                 <div class="iconfont header-fixed-back">&#xe624;</div>
             </router-link>
             景点详情
@@ -29,9 +29,7 @@ export default {
             if (top > 50) {
                 let opacity = top/140
                 opacity = opacity > 1 ? 1: opacity
-                this.opacityStyle = {
-                    opacity
-                }
+                this.opacityStyle = { opacity }
                 this.showAbs = false
             }else{
                 this.showAbs = true
