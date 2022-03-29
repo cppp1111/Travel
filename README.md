@@ -77,16 +77,37 @@ npm run build --report
 |  |   |   |    └iconfont.woff2
 ```
 
+## 运行
+```
+>npm run dev
+```
+
+## 技术栈
+* Vue：用于构建用户界面的 MVVM 框架
+* Vue-router：为单页面应用提供的路由系统
+* axios：用来请求后端数据，谁用谁知道
+* Vuex：集中状态管理，实现多个组件之间共享数据
+* SCSS：css 预编译处理器
+* ES6：新一代的语法规范
+
+## 后台数据的处理
+本项目没有使用后台服务器，而是通过代理的方式，将ajax请求发到本地文件夹public中，获取json文件
+```javascript
+//  /config/index.js(vue3.0没有这个文件需自己创建)
+proxyTable: {
+  '/api': {
+    target: 'http://localhost:8080', // 会把请求转发到当前服务器
+    changeOrigin: true,  // 是否跨域
+    pathRewrite: {
+      '^/api': '/data'  '//  一旦请求的地址是以/api开头的，那么就替换请求到...
+    }
+  }
+}  
+```
+
 ## 项目部分截图
 ![Snipaste_2022-03-29_13-52-49](https://user-images.githubusercontent.com/91047039/160543721-f6095b60-c412-4366-8a0d-f48e60dc60bb.png)
 ![Snipaste_2022-03-29_13-53-33](https://user-images.githubusercontent.com/91047039/160543819-fa555f3d-7635-4c55-a09b-5767ed736980.png)
 ![Snipaste_2022-03-29_13-53-56](https://user-images.githubusercontent.com/91047039/160543821-90eaf9d5-e7a2-40cb-9bf7-c128a6a9c46b.png)
 ![Snipaste_2022-03-29_13-53-08](https://user-images.githubusercontent.com/91047039/160545289-d526240c-adea-48e2-b2d6-9bb921ac9ebe.png)
 
-
-## 运行
-```
->npm run dev
-```
-
-## 
