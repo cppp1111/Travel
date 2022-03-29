@@ -81,9 +81,12 @@ npm run build --report
 ![Snipaste_2022-03-29_13-52-49](https://user-images.githubusercontent.com/91047039/160543721-f6095b60-c412-4366-8a0d-f48e60dc60bb.png)
 ![Snipaste_2022-03-29_13-53-33](https://user-images.githubusercontent.com/91047039/160543819-fa555f3d-7635-4c55-a09b-5767ed736980.png)
 ![Snipaste_2022-03-29_13-53-56](https://user-images.githubusercontent.com/91047039/160543821-90eaf9d5-e7a2-40cb-9bf7-c128a6a9c46b.png)
-![Snipaste_2022-03-29_13-53-56](https://user-images.githubusercontent.com/91047039/160543852-d298f5bf-cba9-4b49-97fb-7f8aa8cce0c0.png)
+![Snipaste_2022-03-29_13-53-08](https://user-images.githubusercontent.com/91047039/160545289-d526240c-adea-48e2-b2d6-9bb921ac9ebe.png)
+
 
 ## 运行
-npm run dev
+```
+>npm run dev
+```
 
 ## 
