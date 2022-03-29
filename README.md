@@ -90,6 +90,7 @@ npm run build --report
 * SCSS：css 预编译处理器
 * ES6：新一代的语法规范
 
+
 ## 后台数据的处理
 本项目没有使用后台服务器，而是通过代理的方式，将ajax请求发到本地文件夹public中，获取json文件
 ```javascript
@@ -104,6 +105,7 @@ proxyTable: {
   }
 }  
 ```
+
 
 ## 项目部分截图
 ![Snipaste_2022-03-29_13-52-49](https://user-images.githubusercontent.com/91047039/160543721-f6095b60-c412-4366-8a0d-f48e60dc60bb.png)
